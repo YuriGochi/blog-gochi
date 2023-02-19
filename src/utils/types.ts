@@ -3,7 +3,7 @@ export type Data = {
 };
 
 export type Post = {
-  _id: string;
+  id: string;
   author?: string;
   author_img?: string;
   cover_img?: string;

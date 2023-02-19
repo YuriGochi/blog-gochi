@@ -19,7 +19,7 @@ const CardPost: React.FC<Props> = (posts: Props) => {
   return (
     <>
       {posts?.posts?.map((post: Post, index: number) => (
-        <Link key={index} href={`/posts/view/${post._id}`}>
+        <Link key={index} href={`/posts/view/${post.id}`}>
           <Card
             key={index}
             style={{ width: 300, margin: "10px 10px" }}
