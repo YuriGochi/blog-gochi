@@ -40,17 +40,10 @@ const Main: React.FC<ContainerProps> = (props:ContainerProps) => {
             background: colorBgContainer,
             height: "100%",
             position: "relative",
+            textAlign:"center"
           }}
         >
-          <div
-            style={{
-              padding: "10px 10px",
-              textAlign: "center",
-              overflow: "auto",
-            }}
-          >
             {props?.children}
-          </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
           GochiLab ©2023 Created by Yuri O. Gochi

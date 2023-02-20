@@ -1,0 +1,51 @@
+.headerPost {
+    display: flex;
+    align-items: center;
+    padding: 3vh;
+
+    .headerImg {
+        border-radius: 100%;
+        padding:1vh
+    }
+
+    .headerTitle {
+        font-size: 3vh;
+        padding: 1vh;
+        color: rgb(201, 201, 207)
+    }
+}
+
+.bodyPost {
+    padding-bottom: 5vh;
+    width: 100%;
+    overflow:auto;
+
+    &__img {
+        max-width:150vh;
+        max-height:100vh;
+        width: auto;
+        height: auto;
+        padding-bottom: 5vh;
+        border-radius: 3vh;
+    }
+
+    &__title  {
+        font-size: 6vh;
+        color: rgb(238, 237, 241);
+        padding-bottom: 3vh;
+    }
+
+    &__subTitle {
+        font-size: 4vh;
+        color:rgb(201, 201, 207);
+        padding-bottom: 7vh;
+    }
+
+    &__description {
+        font-size: 2.9vh;
+        color:rgb(201, 201, 207);
+        padding-bottom: 2vh;
+        line-height: 5vh
+    }
+}
+
