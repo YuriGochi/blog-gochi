@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import { getPosts } from "@/lib/helpers";
 
 type Props = {
-  posts: Post[]; //👈 children prop typr
+  posts: Post[]; 
 };
 
 const Posts: NextPage<Props> = (props) => {
@@ -29,13 +29,15 @@ const Posts: NextPage<Props> = (props) => {
   )
 };
 
-export default Posts;
-
-export async function getStaticProps() {
+export async function getServerSideProps({params}:any) {
   const posts = await getPosts()
 
   return {
     props: {posts},
   }
 }
+
+export default Posts;
+
+
 
