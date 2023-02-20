@@ -1,31 +1,43 @@
 import React from "react";
 import Main from "../../../components/Main";
 import { getPost } from "@/lib/helpers";
-import { Col, Row, Space } from "antd";
+import { Col, Row, Space, theme } from "antd";
+import styles from "./styles.module.scss"
+
 
 const ViewPost: React.FC = (post:any) => {
   const postUnique = post?.post
   return (
     <Main>
-      <Row justify="space-around" >
-        <Col span={4}>
-          <Space direction="vertical">
+      <div style={{ background: "#001529",}}>
+      <Row>
+        <Col span={20} offset={2}>
+          <div className={styles.headerPost}>
             <img
               src={postUnique.author_img}
-              alt="Imagem do post"
-              style={{ borderRadius: "100%" }}
-              />
-            <h1>{postUnique.author}</h1>
-            <h1>{postUnique.date}</h1>
-          </Space>
-        </Col>
-        <Col span={14}>
-          <h2>{postUnique.title}</h2>
-          <h1>{postUnique.sub_title}</h1>
-          <p>{postUnique.description}</p>
+              alt="Imagem de perfil"
+              className={styles.headerImg}
+            />
+              <h1 className={styles.headerTitle}>{postUnique.author}</h1>
+              {/* <h1 className={styles.headerSubitle}>{postUnique.date}</h1> */}
+            </div>
         </Col>
       </Row>
+      <Row justify="space-around">
+      <Col span={22} className={styles.bodyPost}>
+          <h1 className={styles.bodyPost__title}>{postUnique.title}</h1>
+          <h1 className={styles.bodyPost__subTitle}>{postUnique.sub_title}</h1>
+          <img
+              src={postUnique.cover_img}
+              alt="Imagem do post"
+              className={styles.bodyPost__img}
+            />
+          <p className={styles.bodyPost__description}>{postUnique.description}</p>
+        </Col>
+      </Row>
+      </div>
     </Main>
+      
   );
 };
 
