@@ -1,13 +1,8 @@
-import React, { useEffect, useState } from "react";
-import {
-  EditOutlined,
-  EllipsisOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
-import { Avatar, Card, Col, Row } from "antd";
-import { Data, Post } from "@/utils/types";
+import React from "react";
+
+import { Avatar, Card} from "antd";
 import Link from "next/link";
-import Image from "next/image";
+import { Post } from "@/utils/types";
 
 const { Meta } = Card;
 
@@ -24,7 +19,7 @@ const CardPost: React.FC<Props> = (posts: Props) => {
             key={index}
             style={{ width: 300, margin: "10px 10px" }}
             type="inner"
-            cover={<img alt="example" src={post.cover_img || ''} style={{
+            cover={<img alt="example" src={post.coverImg || ''} style={{
               width: "100%",
               height: "200px",
               objectFit: "cover",
@@ -37,9 +32,9 @@ const CardPost: React.FC<Props> = (posts: Props) => {
           >
             <Meta
               key={index}
-              avatar={<Avatar src={post.author_img} />}
+              avatar={<Avatar src={post.author.userImg} />}
               title={post?.title}
-              description={post?.sub_title}
+              description={post?.subTitle}
               style={{
                 width: "100%",
                 height: "100px",

@@ -9,7 +9,7 @@ export const getPosts = async() => {
     return json;
 }
 export const getPost = async(id:string) => {
-    const response = await fetch(`${BASE_URL}/post/${id}`);
+    const response = await fetch(`${BASE_URL}/posts/${id}`);
     const json = response.json();
     return json;
 }

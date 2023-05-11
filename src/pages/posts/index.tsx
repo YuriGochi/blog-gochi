@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Posts: NextPage<Props> = (props) => {
-
+  console.log("props",props)
   return (
     <>
       <Main>
